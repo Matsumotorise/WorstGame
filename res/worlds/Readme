@@ -1,0 +1,8 @@
+How to format Worlds:
+  --Separate numbers via spaces
+
+[Width] [Height]
+[spawnX] [spawnY]
+[worldTile] [worldTile] [worldTile]
+
+
