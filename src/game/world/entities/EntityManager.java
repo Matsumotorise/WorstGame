@@ -56,7 +56,6 @@ public class EntityManager {
   public void addEntity(Entity e) {
     entities.add(e);
   }
-
   public List<Entity> getEntities() {
     return entities;
   }

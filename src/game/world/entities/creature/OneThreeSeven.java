@@ -17,7 +17,7 @@ public class OneThreeSeven extends Creature {
   }
 
   @Override
-  public void die() {
+  public void drop() {
 
   }
 

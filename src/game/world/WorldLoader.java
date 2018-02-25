@@ -2,6 +2,7 @@ package game.world;
 
 import game.Handler;
 import game.gfx.tiles.Tile;
+import game.item.ItemManager;
 import game.utils.Utils;
 import game.world.entities.EntityManager;
 import game.world.entities.creature.OneThreeSeven;
@@ -15,13 +16,17 @@ public class WorldLoader {
   private int spawnX, spawnY;
   private int[][] map;
   private Handler handler;
-
+  //Entities
   private EntityManager entityManager;
+  //Items
+  private ItemManager itemManager;
 
   public WorldLoader(Handler handler, String path) {
     this.handler = handler;
+
     entityManager = new EntityManager(handler, new Player(handler, 0, 0));
     loadWorld(path);
+    itemManager = new ItemManager(handler);
 
     //NPCs
     entityManager.addEntity(new OneThreeSeven(handler, (float) (64 * 16.75), 0, 2, 3));
@@ -35,6 +40,7 @@ public class WorldLoader {
   }
 
   public void update() {
+    itemManager.update();
     entityManager.update();
   }
 
@@ -58,6 +64,9 @@ public class WorldLoader {
 
       }
     }
+    //Item
+    itemManager.render(g);
+    //Entity
     entityManager.render(g);
   }
 
@@ -96,6 +105,14 @@ public class WorldLoader {
 
   public EntityManager getEntityManager() {
     return entityManager;
+  }
+
+  public Handler getHandler() {
+    return handler;
+  }
+
+  public ItemManager getItemManager() {
+    return itemManager;
   }
 
   public int getSpawnX() {

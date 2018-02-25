@@ -19,9 +19,7 @@ public abstract class Entity {
   private EntityCollision entityCollision;
   private int hp;
 
-
   public Entity(Handler handler, float x, float y, int width, int height) {
-
     this.handler = handler;
 
     //Components
@@ -43,14 +41,18 @@ public abstract class Entity {
     }
   }
 
-  public abstract void die();
+  public void die(){
+    active = false;
+    drop();
+  }
+  public abstract void drop();
   protected abstract void setHitbox();
   protected abstract void showHitbox(Graphics g);
+
   //Getters and Setters
   public boolean isActive() {
     return active;
   }
-
 
   public void setActive(boolean active) {
     this.active = active;
@@ -96,5 +98,4 @@ public abstract class Entity {
   }
   public abstract void update();
   public abstract void render(Graphics g);
-
 }

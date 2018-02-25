@@ -18,7 +18,7 @@ public class Player extends Creature {
   }
 
   @Override
-  public void die() {
+  public void drop() {
     System.out.println("Death has occurred");
   }
 

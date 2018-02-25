@@ -8,18 +8,23 @@ import java.util.List;
 public class Assets {
 
   //////////////////TILES/////////////////////////////
-  private static final int TILE_WIDTH = 32, TILE_HEIGHT = 32;
+  private static final int TILE_WIDTH = 32, TILE_HEIGHT = 32, ITEM_WIDTH = 16, ITEM_HEIGHT = 16;
+  public static BufferedImage[] btnStart;
+
+  //ArrayList vs LinkedList?
   public static List<List<Animator>> playerFrame;
   public static List<Animator> F137;
-  public static BufferedImage[] btnStart;
-  //ArrayList vs LinkedList?
+
   //More CPU vs Memory consumption
-  public static BufferedImage dirt, grass, stone, tree1;
+        //Dirt, grass, stone, tree1
+  public static BufferedImage[] Tiles = new BufferedImage[4];
+  public static BufferedImage[] Items = new BufferedImage[4];
 
   public static void init() {
     //SpriteLoaders
     SpriteLoader sheet = new SpriteLoader("/textures/sheet.png");
     SpriteLoader tileSet = new SpriteLoader("/textures/Tileset.png");
+    SpriteLoader itemSet = new SpriteLoader("/textures/Item.png");
     SpriteLoader mewWalking = new SpriteLoader("/textures/Protagmew.png");
     SpriteLoader mewRunning = new SpriteLoader("/textures/MewRun.png");
     SpriteLoader OneThreeSevenWalking = new SpriteLoader("/textures/137.png");
@@ -193,11 +198,15 @@ public class Assets {
             (new Animator(500, w137[2])),
             (new Animator(500, w137[3]))));
 
-    /////////////////////Basic Texture/////////////////////////////////////////
-    tree1 = tileSet.crop(2, 2080, 92, 129);
-    dirt = sheet.crop(TILE_WIDTH, 0, TILE_WIDTH, TILE_HEIGHT);
-    grass = sheet.crop(2 * TILE_WIDTH, 0, TILE_WIDTH, TILE_HEIGHT);
-    stone = sheet.crop(3 * TILE_WIDTH, 0, TILE_WIDTH, TILE_HEIGHT);
+    /////////////////////Basic Tile Texture/////////////////////////////////////////
+    Tiles[0] = sheet.crop(TILE_WIDTH, 0, TILE_WIDTH, TILE_HEIGHT);
+    Tiles[1] = sheet.crop(2 * TILE_WIDTH, 0, TILE_WIDTH, TILE_HEIGHT);
+    Tiles[2] = sheet.crop(3 * TILE_WIDTH, 0, TILE_WIDTH, TILE_HEIGHT);
+    Tiles[3] = tileSet.crop(2, 2080, 92, 129);
+
+    /////////////////////Basic Item Texture/////////////////////////////////////////
+    //Sticks
+    Items[0] = itemSet.crop(8 * ITEM_WIDTH, 4 * ITEM_HEIGHT, ITEM_WIDTH, ITEM_WIDTH);
 
     ////////////////Button Start/////////////////////
     btnStart = new BufferedImage[]{sheet.crop(6 * TILE_WIDTH, 0, TILE_WIDTH * 2, TILE_HEIGHT),
