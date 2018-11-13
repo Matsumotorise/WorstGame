@@ -5,14 +5,15 @@ import java.awt.event.KeyListener;
 
 public class KeyManager implements KeyListener {
 
-  private boolean up = false, down = false, left = false, right = false,
+  private boolean
+      up = false, down = false, left = false, right = false,
       aUp = false, aDown = false, aLeft = false, aRight = false,
       esc = false, shift = false, attacking = false;
+
   private boolean[] keys;
 
   public KeyManager() {
     keys = new boolean[256];
-
   }
 
   public void update() {
@@ -49,7 +50,6 @@ public class KeyManager implements KeyListener {
 
   }
 
-
   public boolean isUp() {
     return up;
   }
@@ -65,31 +65,24 @@ public class KeyManager implements KeyListener {
   public boolean isLeft() {
     return left;
   }
-
   public boolean isRight() {
     return right;
   }
-
   public boolean isaUp() {
     return aUp;
   }
-
   public boolean isaDown() {
     return aDown;
   }
-
   public boolean isaLeft() {
     return aLeft;
   }
-
   public boolean isaRight() {
     return aRight;
   }
-
   public boolean isShift() {
     return shift;
   }
-
   public boolean isEsc() {
     return esc;
   }

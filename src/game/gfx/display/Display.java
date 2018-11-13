@@ -13,7 +13,7 @@ public class Display extends JFrame {
     super(title);
 
     this.height = height;
-    this.width = height;
+    this.width = width;
     //////////////////////////////
     //JFrame setup
     setResizable(false);

@@ -3,6 +3,7 @@ package game.world.entities.creature;
 import game.Handler;
 import game.gfx.Animator;
 import game.gfx.Assets;
+import game.item.Item;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Iterator;
@@ -18,7 +19,9 @@ public class OneThreeSeven extends Creature {
 
   @Override
   public void drop() {
-
+    handler.getWorld().getItemManager().addItem(Item.wood.createNew(
+        (int) (getX() + getWidth() / 2 + Math.random() * 50),
+        (int) (getY() + getHeight() / 2 + Math.random() * 50)));
   }
 
   @Override
@@ -27,6 +30,18 @@ public class OneThreeSeven extends Creature {
     while (iterator.hasNext()) {
       Animator a = iterator.next();
       a.update();
+    }
+    double randA = Math.random();
+    if(randA  > .5) {
+      setX((float) ((getX() + getSpeed().getRSpeed())*randA));
+    } else {
+      setX((float) ((getX() - getSpeed().getRSpeed())*randA));
+    }
+    double randB = Math.random();
+    if(randB  > .5) {
+      setY((float) ((getY() + getSpeed().getRSpeed())*randB));
+    } else {
+      setY((float) ((getY() - getSpeed().getRSpeed())*randB));
     }
   }
 

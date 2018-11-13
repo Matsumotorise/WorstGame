@@ -25,7 +25,7 @@ public class Assets {
     SpriteLoader sheet = new SpriteLoader("/textures/sheet.png");
     SpriteLoader tileSet = new SpriteLoader("/textures/Tileset.png");
     SpriteLoader itemSet = new SpriteLoader("/textures/Item.png");
-    SpriteLoader mewWalking = new SpriteLoader("/textures/Protagmew.png");
+    SpriteLoader mewWalking = new SpriteLoader("/textures/ProtagMew.png");
     SpriteLoader mewRunning = new SpriteLoader("/textures/MewRun.png");
     SpriteLoader OneThreeSevenWalking = new SpriteLoader("/textures/137.png");
 
