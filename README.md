@@ -10,7 +10,7 @@
   
 # Controls
 
-![GitHub Logo](demo1.png)
+![Demo1](demo1.png)
 + WSAD Controls
 + Shift to sprint
 + Arrow keys to attack an entity?
