@@ -15,7 +15,9 @@
 
 + WSAD Controls
 + Shift to sprint
+
 ![Demo1](res/demos/demo2.png)
+
 + Arrow keys to attack an entity
 
 
