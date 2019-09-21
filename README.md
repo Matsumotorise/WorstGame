@@ -1,7 +1,8 @@
 # About
 
-![Demo1](res/demos/demo1.png)
 + A simple Java game that has no particular purpose at the moment.
++ Features collision detection, animation frames, and attackable entities.
+![Demo1](res/demos/demo1.png)
 
 # Compile
 
@@ -12,9 +13,9 @@
   
 # Controls
 
-![Demo1](res/demos/demo2.png)
 + WSAD Controls
 + Shift to sprint
+![Demo1](res/demos/demo2.png)
 + Arrow keys to attack an entity
 
 
