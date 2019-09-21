@@ -1,6 +1,6 @@
 # About
 
-![Demo1](demo1.png)
+![Demo1](res/demos/demo1.png)
 + A simple Java game that has no particular purpose at the moment.
 
 # Compile
@@ -12,9 +12,10 @@
   
 # Controls
 
+![Demo1](res/demos/demo2.png)
 + WSAD Controls
 + Shift to sprint
-+ Arrow keys to attack an entity?
++ Arrow keys to attack an entity
 
 
 # Todo
