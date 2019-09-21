@@ -1,5 +1,5 @@
 # About
-+ Half baked Java game I made in High school.
++ A simple Java game that has no particular purpose at the moment.
 + Not everything is well optimized.
 
 # Compile
@@ -9,6 +9,8 @@
   + Run from main function in game.Launch.java found in src
   
 # Controls
+
+![GitHub Logo](/images/logo.png)
 + WSAD Controls
 + Shift to sprint
 + Arrow keys to attack an entity?
