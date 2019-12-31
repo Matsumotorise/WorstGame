@@ -25,4 +25,4 @@
 + Computation algorithim optimizations
 + Spacial partitioning collision detection
 + Enemy AI using BFS and relative positions 
-
++ Use the GPU.
